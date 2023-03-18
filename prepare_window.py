@@ -129,7 +129,7 @@ child_row2 = [sg.Image('', size=ico_size, enable_events=True, background_color=g
 
 history_col1 = sg.Column(layout=[
     [sg.Image('', size=history_ico_size, enable_events=True, visible=False, background_color=sg.theme_background_color(), key='HISTORY_ICO_01'),
-     sg.Button('', size=history_name_size, visible=False, border_width=2, key='HISTORY_NAME_01'), ],
+     sg.Button('', size=history_name_size, visible=False, key='HISTORY_NAME_01'), ],
     [sg.Image('', size=history_ico_size, enable_events=True, visible=False, background_color=sg.theme_background_color(), key='HISTORY_ICO_02'),
      sg.Button('', size=history_name_size, visible=False, key='HISTORY_NAME_02'), ],
     [sg.Image('', size=history_ico_size, enable_events=True, visible=False, background_color=sg.theme_background_color(), key='HISTORY_ICO_03'),
