@@ -15,4 +15,5 @@ To run this app you need Spotify dev account, so:
 9. Done. You're good to run main.py
 
 * I assume you dont have an spotify dev account and app
+
 ** In case you have localport 8080 occupied select different port and change SPOTIPY_CLIENT_URL value in config.py file
