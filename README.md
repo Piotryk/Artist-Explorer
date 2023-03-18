@@ -12,7 +12,8 @@ To run this app you need Spotify dev account, so:
 7. From app overview copy Client ID and paste it as string as SPOTIPY_CLIENT_ID value in config.py file.
 	It should look like this: SPOTIPY_CLIENT_ID = 'aa11aa'
 8. From app overview click 'Show client secret' under your ID and paste it as string as SPOTIPY_CLIENT_SECRET value in config.py file
-9. Done. You're good to run main.py
+9. In config.py change pomidorek_id value to ID of any of your playlist. You can get ID by opening playlist in web browser. ID is between playlist/ and ?si=
+10. Done. You're good to run main.py
 
 
 ** I assume you dont have an spotify dev account and app
