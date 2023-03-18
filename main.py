@@ -318,7 +318,8 @@ while True:
     if event in ['SEARCH', 'SEARCH_ENTER']:
         if values['SEARCH_NAME'] != window['CURRENT_NAME'].get_text():
             prepare_window.hide_children(window)
-            prepare_window.clear_parents(window)
+            if not values['KEEP_PARENTS']:
+                prepare_window.clear_parents(window)
             # prepare_window.clear_history(window)
             flag_expanded = 0
             if window['DUPES'].get():
@@ -440,8 +441,13 @@ while True:
         # noinspection PyTypeChecker
         top_songs = spotify.artist_top_tracks(current_artist['id'])['tracks']
         nr = get_nr(event) - 1
+        playlist = spotify.playlist_items(pomidorek_id)['items']
         if not nr > len(top_songs):
-            tracks = [top_songs[nr]['id']]
-            spotify.playlist_add_items(pomidorek_id, items=tracks)
+            track = top_songs[nr]['id']
+            playlist_songs = []
+            for song in playlist:
+                playlist_songs.append(song['track']['id'])
+            if track not in playlist_songs:
+                spotify.playlist_add_items(pomidorek_id, items=[track])
 
 window.close()
