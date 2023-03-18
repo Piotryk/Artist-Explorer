@@ -9,8 +9,8 @@ To run this app you need Spotify dev account, so:
 4. Fill name and description with anything you like
 5. In app overview click edit settings and to 'Redirect URIs' add "http://localhost:8080/callback" ***
 6. Save changes and go to config.py file
-7. From app overview copy Client ID and paste it as string as SPOTIPY_CLIENT_ID value in config.py file
-	it should look like this: SPOTIPY_CLIENT_ID = 'aa11aa'
+7. From app overview copy Client ID and paste it as string as SPOTIPY_CLIENT_ID value in config.py file.
+	It should look like this: SPOTIPY_CLIENT_ID = 'aa11aa'
 8. From app overview click 'Show client secret' under your ID and paste it as string as SPOTIPY_CLIENT_SECRET value in config.py file
 9. Done. You're good to run main.py
 
