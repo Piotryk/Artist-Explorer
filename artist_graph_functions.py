@@ -54,6 +54,7 @@ def download_top_song(url, name):
 
 
 def make_top_tracks(main_window, spotify, spotify_id):
+    clear_top_tracks(main_window)
     top_songs = spotify.artist_top_tracks(spotify_id)['tracks']
     urls = []
     names = []
@@ -67,7 +68,9 @@ def make_top_tracks(main_window, spotify, spotify_id):
             preview_name = f'assets/temp/preview{nr + 1}.mp3'
             ico_name = f'assets/temp/top_ico{nr + 1}.png'
             urls.append(top_songs[nr]['preview_url'])
-            urls.append(top_songs[nr]['album']['images'][-1]['url'])
+            if top_songs[nr]['album']:
+                if top_songs[nr]['album']['images']:
+                    urls.append(top_songs[nr]['album']['images'][-1]['url'])
             names.append(preview_name)
             names.append(ico_name)
 
